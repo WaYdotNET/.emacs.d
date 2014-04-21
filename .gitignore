@@ -1,6 +1,7 @@
 *~
 *.elc
 auto-save-list
+ac-comphist.dat
 recentf
 savehist
 saveplace

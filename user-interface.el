@@ -139,7 +139,7 @@
 ;; salviamo la posizione del cursore quando chiudo un buffer
 ;; in modo da ripristinarla
 (require 'saveplace)
-(setq save-place-file (concat user-emacs-directory "saveplace.el"))
+(setq save-place-file (concat user-emacs-directory "saveplace"))
 
 
 ;; quando ho un testo selezionato, questo viene sovrascritto da quello che scrivo :D
