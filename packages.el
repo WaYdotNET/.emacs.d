@@ -49,11 +49,14 @@
     rubocop
     ruby-compilation
     ruby-tools
+    yaml-mode
     skewer-mode
 
     ;; package usefull
     multi-term
     magit
+    git-commit-mode
+    git-rebase-mode
     dired+
     full-ack
     smex
