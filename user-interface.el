@@ -32,6 +32,9 @@
 ;; show column number in mode-line
 (setq column-number-mode t)
 
+;; fun :D
+(require 'nyan-mode)
+(nyan-mode)
 
 (set-frame-font "Source Code Pro for Powerline-12")
 

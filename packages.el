@@ -68,5 +68,8 @@
     auto-complete-nxml
     popup
 
+    ;; fun
+    nyan-mode
+
     )
   "a list of packages to ensure are installed at lauch.")
