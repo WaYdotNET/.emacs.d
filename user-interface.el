@@ -192,6 +192,7 @@
 (global-set-key (kbd "C-z") 'undo) ; 【Ctrl+z】
 
 ;; EDITOR
+(global-auto-revert-mode 1)
 
 ;; auto indentamento
 (electric-indent-mode t)
