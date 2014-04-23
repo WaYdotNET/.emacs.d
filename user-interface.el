@@ -36,6 +36,11 @@
 (require 'nyan-mode)
 (nyan-mode)
 
+;; flat !
+(set-face-attribute 'header-line nil :box nil)
+(set-face-attribute 'mode-line nil :box nil)
+(set-face-attribute 'mode-line-inactive nil :box nil)
+
 (set-frame-font "Source Code Pro for Powerline-12")
 
 ;; disabilito la acapo automatico
