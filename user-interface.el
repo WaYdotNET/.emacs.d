@@ -138,7 +138,7 @@
 ;; salvo in automatico quello che avevo aperto, cosi' al prossimo riavvio
 ;; ho di nuovo tutto quello che mi serve
 ;; activate desktop save mode and load a saved desktop if it exists
-;;(if (not (daemonp)) (desktop-save-mode 1))
+(if (not (daemonp)) (desktop-save-mode 1))
 ;; salviamo la posizione del cursore quando chiudo un buffer
 ;; in modo da ripristinarla
 (require 'saveplace)
