@@ -8,7 +8,10 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; cool frame title with currently edited buffer name
-(setq frame-title-format '(buffer-file-name "%f" ("%b")))
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
 
 
 ;; rimoviamo i backup automatici fatti da emacs
