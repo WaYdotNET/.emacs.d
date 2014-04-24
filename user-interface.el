@@ -50,18 +50,22 @@
 (require 'smex)
 (smex-initialize)
 
-;; sr-speed bar
-(require 'sr-speedbar)
-;; show all files
-(setq speedbar-show-unknown-files t)
-;; turn off the ugly icons
-(setq speedbar-use-images nil)
-;; left-side pane
-(setq sr-speedbar-right-side nil)
-;; don't refresh on buffer changes
-(setq sr-speedbar-auto-refresh)
-(setq speedbar-smart-directory-expand-flag t)
-(setq speedbar-hide-button-brackets-flag t)
+
+;; ;; sr-speed bar
+;; (require 'sr-speedbar)
+;; ;; show all files
+;; (setq speedbar-show-unknown-files t)
+;; ;; turn off the ugly icons
+;; (setq speedbar-use-images nil)
+;; ;; left-side pane
+;; (setq sr-speedbar-right-side nil)
+;; ;; don't refresh on buffer changes
+;; (setq sr-speedbar-auto-refresh)
+;; (setq speedbar-smart-directory-expand-flag t)
+;; (setq speedbar-hide-button-brackets-flag t)
+
+;; project-explorer
+(require 'project-explorer)
 
 ;; Show the current function name in the header line
 (which-function-mode)
@@ -143,7 +147,22 @@
 ;; salvo in automatico quello che avevo aperto, cosi' al prossimo riavvio
 ;; ho di nuovo tutto quello che mi serve
 ;; activate desktop save mode and load a saved desktop if it exists
-(if (not (daemonp)) (desktop-save-mode 1))
+
+;; (require 'desktop)
+;; (setq desktop-dirname user-emacs-directory)
+;; (setq desktop-path (list desktop-dirname))
+
+;; (desktop-save-mode +1)
+;; Automatically save and restore sessions
+;; (setq desktop-dirname             user-emacs-directory
+;;       desktop-base-file-name      "emacs.desktop"
+;;       desktop-base-lock-name      "lock"
+;;       desktop-path                (list desktop-dirname)
+;;       desktop-save                t
+;;       desktop-files-not-to-save   "^$" ;reload tramp paths
+;;       desktop-load-locked-desktop nil)
+;; (desktop-save-mode 1)
+
 ;; salviamo la posizione del cursore quando chiudo un buffer
 ;; in modo da ripristinarla
 (require 'saveplace)
@@ -240,7 +259,6 @@
 ;; flyspell mode breaks auto-complete mode without this.
 (ac-flyspell-workaround)
 
-
 ;; EDITOR : WEB
 
 (setq whitespace-line-column 119) ;; limit line length
@@ -324,10 +342,10 @@
 (setq web-mode-enable-part-face t)
 (setq web-mode-enable-comment-keywords t)
 
-(setq web-mode-markup-indent-offset 2)
-(setq web-mode-css-indent-offset 2)
-(setq web-mode-code-indent-offset 2)
-(setq web-mode-indent-style 2)
+(setq web-mode-markup-indent-offset 4)
+(setq web-mode-css-indent-offset 4)
+(setq web-mode-code-indent-offset 4)
+(setq web-mode-indent-style 4)
 
 
 ;; RUBY

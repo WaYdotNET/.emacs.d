@@ -26,8 +26,6 @@
   (byte-recompile-directory user-emacs-directory 0)
   (message "%s" "recompile...done!")
   )
-
-
 ;; if not all packages are installed, check one by one and install the mssing ones.
 (unless (packages-installed-p)
   ;; check for new packages (package versions)

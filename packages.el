@@ -14,8 +14,9 @@
     color-theme-sanityinc-tomorrow
     color-identifiers-mode
     idle-highlight-mode
-    powerline
-    sr-speedbar
+    ;; powerline
+    ;;sr-speedbar
+    project-explorer
     visual-regexp
     zenburn-theme
     flatland-theme
@@ -61,6 +62,8 @@
     full-ack
     smex
     undo-tree
+    dsvn
+    diff-hl
 
     ;; auto complete system
     auto-complete

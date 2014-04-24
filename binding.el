@@ -27,7 +27,10 @@
 (define-key my-keys-minor-mode-map (kbd "M-RET") 'toggle-fullscreen)
 
 ;; sr-speedbar
-(define-key my-keys-minor-mode-map (kbd "M-1") 'sr-speedbar-toggle)
+;;(define-key my-keys-minor-mode-map (kbd "M-1") 'sr-speedbar-toggle)
+
+;; project-explorer
+(define-key my-keys-minor-mode-map (kbd "M-1") 'project-explorer-open)
 
 ;; cambio il mapping di default di taglio (C-w)
 (define-key my-keys-minor-mode-map [remap kill-region] 'cut-line-or-region)
