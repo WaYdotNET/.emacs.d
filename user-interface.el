@@ -8,8 +8,8 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; cool frame title with currently edited buffer name
-;; (setq frame-title-format
-;;       (concat "%b - " invocation-name "@" system-name))
+(setq frame-title-format '(buffer-file-name "%f" ("%b")))
+
 
 ;; rimoviamo i backup automatici fatti da emacs
 (setq make-backup-file nil)
