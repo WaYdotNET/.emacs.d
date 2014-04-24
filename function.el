@@ -59,6 +59,16 @@
     )
   )
 
+(setq
+ time-stamp-active t          ; do enable time-stamps
+ time-stamp-line-limit 10     ; check first 10 buffer lines for Time-stamp:
+ time-stamp-format "%04y-%02m-%02d %02H:%02M:%02S (WaYdotNET)") ; date format
+(add-hook 'write-file-hooks 'time-stamp) ; update when saving
+;; es
+;;  * Time-stamp: <2013-07-26 18:28:37 (WaYdotNET)>
+
+;;
+
 ;; show ascii table
 ;; optained from http://www.chrislott.org/geek/emacs/dotemacs.html
 (defun ascii-table ()
