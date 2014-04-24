@@ -50,20 +50,6 @@
 (require 'smex)
 (smex-initialize)
 
-
-;; ;; sr-speed bar
-;; (require 'sr-speedbar)
-;; ;; show all files
-;; (setq speedbar-show-unknown-files t)
-;; ;; turn off the ugly icons
-;; (setq speedbar-use-images nil)
-;; ;; left-side pane
-;; (setq sr-speedbar-right-side nil)
-;; ;; don't refresh on buffer changes
-;; (setq sr-speedbar-auto-refresh)
-;; (setq speedbar-smart-directory-expand-flag t)
-;; (setq speedbar-hide-button-brackets-flag t)
-
 ;; project-explorer
 (require 'project-explorer)
 
