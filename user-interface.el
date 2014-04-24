@@ -53,6 +53,10 @@
 ;; project-explorer
 (require 'project-explorer)
 
+;; enable Projectile globally
+(require 'projectile)
+(projectile-global-mode)
+
 ;; Show the current function name in the header line
 (which-function-mode)
 (setq which-func-unknown "n/a")
