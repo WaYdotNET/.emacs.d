@@ -14,12 +14,9 @@
     color-theme-sanityinc-tomorrow
     color-identifiers-mode
     idle-highlight-mode
-    ;; powerline
-    ;;sr-speedbar
     project-explorer
     visual-regexp
     zenburn-theme
-    flatland-theme
     workgroups2
 
     ;; editor
@@ -34,7 +31,7 @@
     projectile
     smartparens
     rainbow-mode
-    ;;rainbow-delimiters
+    rainbow-delimiters
     markdown-mode
 
     ;; editor : web
@@ -63,7 +60,6 @@
     smex
     undo-tree
     dsvn
-    diff-hl
 
     ;; auto complete system
     auto-complete
