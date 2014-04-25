@@ -162,6 +162,8 @@
 (require 'saveplace)
 (setq save-place-file (concat user-emacs-directory "saveplace"))
 
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode)
 
 ;; quando ho un testo selezionato, questo viene sovrascritto da quello che scrivo :D
 (delete-selection-mode t)
