@@ -60,6 +60,7 @@
     smex
     undo-tree
     dsvn
+    git-gutter-fringe
 
     ;; auto complete system
     auto-complete

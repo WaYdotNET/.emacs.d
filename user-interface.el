@@ -29,8 +29,7 @@
 
 ;;
 (load-theme 'zenburn)
-;; (require 'powerline)
-;; (powerline-default-theme)
+
 
 ;; show column number in mode-line
 (setq column-number-mode t)
@@ -85,6 +84,11 @@
     (linum-mode 1)))
 ;; disable linum for speedbar
 (add-hook 'speedbar-mode-hook  '(lambda () (linum-mode 0)))
+
+;; git-gutter-fringe
+(require 'git-gutter-fringe)
+(global-git-gutter-mode 1)
+
 
 ;; ido mode per il completamento dei file e dir
 (ido-mode 1)
