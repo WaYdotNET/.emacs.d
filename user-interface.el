@@ -85,11 +85,8 @@
 ;; disable linum for speedbar
 (add-hook 'speedbar-mode-hook  '(lambda () (linum-mode 0)))
 
-;; git-gutter-fringe
-(require 'git-gutter-fringe)
-(global-git-gutter-mode 1)
-
-
+(require 'diff-hl)
+(global-diff-hl-mode 1)
 ;; ido mode per il completamento dei file e dir
 (ido-mode 1)
 (ido-everywhere 1)

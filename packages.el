@@ -60,7 +60,7 @@
     smex
     undo-tree
     dsvn
-    git-gutter-fringe
+    diff-hl
 
     ;; auto complete system
     auto-complete
@@ -70,6 +70,5 @@
 
     ;; fun
     nyan-mode
-
     )
   "a list of packages to ensure are installed at lauch.")
