@@ -11,8 +11,6 @@
     flx
     flx-ido
     ido-vertical-mode
-    color-theme-sanityinc-tomorrow
-    color-identifiers-mode
     idle-highlight-mode
     project-explorer
     visual-regexp
@@ -30,7 +28,6 @@
     parenface
     projectile
     smartparens
-    rainbow-mode
     rainbow-delimiters
     markdown-mode
 
@@ -67,7 +64,7 @@
     ac-js2
     auto-complete-nxml
     popup
-
+    ac-emmet
     ;; fun
     nyan-mode
     )
