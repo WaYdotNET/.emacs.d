@@ -46,6 +46,7 @@
     ruby-tools
     yaml-mode
     skewer-mode
+    csharp-mode
 
     ;; package usefull
     multi-term

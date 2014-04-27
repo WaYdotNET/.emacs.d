@@ -30,7 +30,6 @@
 ;;
 (load-theme 'zenburn)
 
-
 ;; show column number in mode-line
 (setq column-number-mode t)
 
@@ -142,6 +141,18 @@
 ;; ho di nuovo tutto quello che mi serve
 ;; activate desktop save mode and load a saved desktop if it exists
 
+
+(require 'desktop)
+;; Automatically save and restore sessions
+(setq desktop-dirname             "~/.emacs.d/desktop/"
+      desktop-base-file-name      "emacs.desktop"
+      desktop-base-lock-name      "lock"
+      desktop-path                (list desktop-dirname)
+      desktop-save                t
+      desktop-files-not-to-save   "^$" ;reload tramp paths
+      desktop-load-locked-desktop nil)
+(desktop-save-mode 1)
+
 ;; (require 'desktop)
 ;; (setq desktop-dirname user-emacs-directory)
 ;; (setq desktop-path (list desktop-dirname))
@@ -227,17 +238,18 @@
 (show-smartparens-global-mode t)
 
 ;; change color of bracket, curly
-(require 'parenface)
-(eval-after-load 'parenface
-  (progn
-    (set-face-foreground 'parenface-paren-face "dark gray")
-    (set-face-foreground 'parenface-bracket-face "gray")
-    (set-face-foreground 'parenface-curly-face "gray")))
+;; (require 'parenface)
+;; (eval-after-load 'parenface
+;;   (progn
+;;     (set-face-foreground 'parenface-paren-face "dark gray")
+;;     (set-face-foreground 'parenface-bracket-face "gray")
+;;     (set-face-foreground 'parenface-curly-face "gray")))
 
-(add-hook 'lisp-mode-hook 'paren-face-add-keyword)
-;; (add-hook 'js2-mode-hook 'paren-face-add-keyword)
-;; (add-hook 'js2-mode-hook 'ac-js2-mode)
-(add-hook 'emacs-lisp-mode-hook 'paren-face-add-keyword)
+;; (add-hook 'lisp-mode-hook 'paren-face-add-keyword)
+;; ;; (add-hook 'js2-mode-hook 'paren-face-add-keyword)
+;; ;; (add-hook 'js2-mode-hook 'ac-js2-mode)
+;; (add-hook 'emacs-lisp-mode-hook 'paren-face-add-keyword)
+
 
 ;; ASPELL !!!
 ;; $ sudo port -v selfupdate
@@ -256,6 +268,12 @@
 (ac-flyspell-workaround)
 
 ;; EDITOR : WEB
+(flycheck-color-mode-line-mode 1)
+
+;; CSHARP
+(autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+  (setq auto-mode-alist
+     (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
 
 (setq whitespace-line-column 119) ;; limit line length
 
@@ -289,16 +307,11 @@
 (require 'lzx (concat user-emacs-directory "lzx.el"))
 
 
-
-;; specifichiamo major-mode !
-(add-to-list 'auto-mode-alist '("Gemfile\\'" . ruby-mode))
-;; minor-mode
-;;(add-hook 'text-mode-hook 'orgtbl-mode)
-;; (define-minor-mode my-keys-minor-mode
-;;   "A minor mode for my custom keys"
-;;   t " my-keys" 'my-keys-minor-mode-map)
-;; (my-key-minor-mode-map)
-
+;; org-mode syntax color for code block :D
+(require 'org-latex)
+(setq org-src-fontify-natively t)
+(setq org-export-latex-listings 'minted)
+(add-to-list 'org-export-latex-packages-alist '("" "minted"))
 
 ;; EX zencode... C-j per attivare la preview del autocompletamento
 ;;(require 'emmet-mode)
