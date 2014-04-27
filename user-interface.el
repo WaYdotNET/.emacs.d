@@ -306,12 +306,28 @@
 ;; personl Openlaszlo
 (require 'lzx (concat user-emacs-directory "lzx.el"))
 
+;; org-mode
+;; HACK: http://nickhigham.wordpress.com/2013/07/05/emacs-org-mode-version-8/
+;;
+;; fix org-mode 8:
+;; start emacs without custom (emacs -Q)
+;; delete org (rm -rf ~/.emacs.d/elpa/org-TAB)
+;; M-x package-install org
 
+;; Include the latex-exporter
+(require 'ox-latex)
+;; Add minted to the defaults packages to include when exporting.
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+;; Tell the latex export to use the minted package for source
+;; code coloration.
+(setq org-latex-listings 'minted)
+;; Let the exporter use the -shell-escape option to let latex
+;; execute external programs.
+;; This obviously and can be dangerous to activate!
+(setq org-latex-pdf-process
+      '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 ;; org-mode syntax color for code block :D
-(require 'org-latex)
 (setq org-src-fontify-natively t)
-(setq org-export-latex-listings 'minted)
-(add-to-list 'org-export-latex-packages-alist '("" "minted"))
 
 ;; EX zencode... C-j per attivare la preview del autocompletamento
 ;;(require 'emmet-mode)

@@ -6,6 +6,7 @@
     f
     dash
     tramp
+    org
     ;; custom ui
     ace-jump-mode
     flx
