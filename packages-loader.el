@@ -36,4 +36,5 @@
   (dolist (p required-packages)
     (when (not (package-installed-p p))
       (package-install p)))
-  (recompile-init))
+  ;;(recompile-init)
+  )
