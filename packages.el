@@ -28,6 +28,8 @@
     parenface
     projectile
     smartparens
+    rainbow-mode
+    rainbow-blocks
     rainbow-delimiters
     markdown-mode
 
