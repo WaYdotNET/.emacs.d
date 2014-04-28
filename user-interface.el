@@ -144,29 +144,15 @@
 
 (require 'desktop)
 ;; Automatically save and restore sessions
-(setq desktop-dirname             "~/.emacs.d/desktop/"
-      desktop-base-file-name      "emacs.desktop"
+(setq desktop-dirname             user-emacs-directory
+      desktop-base-file-name      ".emacs.desktop"
       desktop-base-lock-name      "lock"
       desktop-path                (list desktop-dirname)
       desktop-save                t
       desktop-files-not-to-save   "^$" ;reload tramp paths
       desktop-load-locked-desktop nil)
-(desktop-save-mode 1)
-
-;; (require 'desktop)
-;; (setq desktop-dirname user-emacs-directory)
-;; (setq desktop-path (list desktop-dirname))
-
-;; (desktop-save-mode +1)
-;; Automatically save and restore sessions
-;; (setq desktop-dirname             user-emacs-directory
-;;       desktop-base-file-name      "emacs.desktop"
-;;       desktop-base-lock-name      "lock"
-;;       desktop-path                (list desktop-dirname)
-;;       desktop-save                t
-;;       desktop-files-not-to-save   "^$" ;reload tramp paths
-;;       desktop-load-locked-desktop nil)
-;; (desktop-save-mode 1)
+(desktop-save-mode +1)
+(desktop-read)
 
 ;; salviamo la posizione del cursore quando chiudo un buffer
 ;; in modo da ripristinarla
