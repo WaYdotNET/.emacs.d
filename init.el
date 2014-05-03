@@ -1,6 +1,4 @@
 ;; my personal emacs environment
-;;
-
 ;; load packages system !
 (load (concat user-emacs-directory "packages-loader.el"))
 

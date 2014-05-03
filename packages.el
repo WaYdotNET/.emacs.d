@@ -69,6 +69,13 @@
     auto-complete-nxml
     popup
     ac-emmet
+    org-ac
+
+    ;; org-mode
+    org-page
+    org-pandoc
+    org-screenshot
+
     ;; fun
     nyan-mode
     )
