@@ -26,9 +26,6 @@
  ;; fullscreen
 (define-key my-keys-minor-mode-map (kbd "M-RET") 'toggle-fullscreen)
 
-;; sr-speedbar
-;;(define-key my-keys-minor-mode-map (kbd "M-1") 'sr-speedbar-toggle)
-
 ;; project-explorer
 (define-key my-keys-minor-mode-map (kbd "M-1") 'project-explorer-open)
 
@@ -79,9 +76,9 @@
 ;; redo+
 (define-key my-keys-minor-mode-map (kbd "C-?") 'redo)
 
-;; highlight identation
-(define-key my-keys-minor-mode-map (kbd "M-2") 'highlight-indentation-mode)
-(define-key my-keys-minor-mode-map (kbd "M-3") 'highlight-indentation-current-column-mode)
+;; helm imenu
+(define-key my-keys-minor-mode-map (kbd "M-2") 'helm-semantic-or-imenu)
+
 ;; whitespace
 (define-key my-keys-minor-mode-map (kbd "C-*") 'whitespace-mode)
 
