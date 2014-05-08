@@ -12,6 +12,9 @@
                               (load (concat user-emacs-directory "user-interface.el"))
                               ))
 
+(load "server")
+(unless (server-running-p) (server-start))
+
 ;; my name :D
 (setq user-full-name "Carlo Bertini [WaYdotNET]"
       user-mail-address (concat "waydotnet@" "gmail" ".com")
