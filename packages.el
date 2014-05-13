@@ -37,7 +37,7 @@
     ;; editor : web
     web-mode
     js2-mode
-    js2-refactor
+    js2-refactorxs
     emmet-mode
     coffee-mode
     htmlize
@@ -50,6 +50,8 @@
     yaml-mode
     skewer-mode
     csharp-mode
+    slim-mode
+    haml-mode
 
     ;; package usefull
     multi-term
