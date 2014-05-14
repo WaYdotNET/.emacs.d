@@ -42,16 +42,24 @@
     coffee-mode
     htmlize
     mmm-mode
-    ac-inf-ruby
+    skewer-mode
+    csharp-mode
+
+    ;; ruby
     enh-ruby-mode
     rubocop
+    ac-inf-ruby
     ruby-compilation
     ruby-tools
     yaml-mode
-    skewer-mode
-    csharp-mode
     slim-mode
     haml-mode
+
+    ;; python
+    python
+    python-mode
+    python-django
+    virtualenv
 
     ;; package usefull
     multi-term
