@@ -37,6 +37,7 @@
     ;; editor : web
     web-mode
     js2-mode
+    js-doc
     js2-refactor
     emmet-mode
     coffee-mode

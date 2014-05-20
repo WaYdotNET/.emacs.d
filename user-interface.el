@@ -42,6 +42,10 @@
 (set-face-attribute 'mode-line nil :box nil)
 (set-face-attribute 'mode-line-inactive nil :box nil)
 
+;; smart-mode-line
+(setq sml/theme 'dark)
+(sml/setup)
+
 (set-frame-font "Source Code Pro for Powerline-12")
 
 ;; disabilito la acapo automatico
@@ -330,6 +334,7 @@
 ;;   '(add-to-list 'ac-modes 'inf-ruby-mode))
 ;; (add-hook 'inf-ruby-mode-hook 'ac-inf-ruby-enable)
 
+(require 'js-doc)
 ;; javascript => http://melpa.milkbox.net/#/js2-refactor
 (require 'js2-refactor)
 
