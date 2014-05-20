@@ -141,4 +141,9 @@
 (define-key my-keys-minor-mode-map (kbd "M-<down>")  'windmove-down)
 
 
+(add-hook 'js2-mode-hook
+          #'(lambda ()
+              (define-key my-keys-minor-mode-map (kbd "C-c i") 'js-doc-insert-function-doc)
+              (define-key my-keys-minor-mode-map (kbd "@") 'js-doc-insert-tag)))
+
 ;;; personal-bindings.el ends here
