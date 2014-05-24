@@ -29,6 +29,7 @@
     parenface
     projectile
     smartparens
+    smart-mode-line
     rainbow-mode
     rainbow-blocks
     rainbow-delimiters
