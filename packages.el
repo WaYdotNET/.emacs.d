@@ -6,7 +6,7 @@
     f
     dash
     tramp
-    org
+
     ;; custom ui
     ace-jump-mode
     flx
@@ -45,6 +45,7 @@
     mmm-mode
     skewer-mode
     csharp-mode
+    json-mode
 
     ;; ruby
     enh-ruby-mode
@@ -80,12 +81,14 @@
     auto-complete-nxml
     popup
     ac-emmet
-    org-ac
 
     ;; org-mode
+    org
+    org-ac
     org-page
     org-pandoc
     org-screenshot
+    org-trello
 
     ;; fun
     nyan-mode
