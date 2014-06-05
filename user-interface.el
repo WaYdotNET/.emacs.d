@@ -42,6 +42,9 @@
 (set-face-attribute 'mode-line nil :box nil)
 (set-face-attribute 'mode-line-inactive nil :box nil)
 
+;; Highlight Current Line
+(global-hl-line-mode +1)
+
 ;; smart-mode-line
 (setq sml/theme 'dark)
 (sml/setup)
