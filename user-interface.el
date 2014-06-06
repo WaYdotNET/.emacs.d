@@ -76,6 +76,8 @@
       (assq-delete-all 'which-func-mode mode-line-misc-info))
 
 
+;; Remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; tramp, for sudo access
 (require 'tramp)
