@@ -1,5 +1,11 @@
 ;; list personal function
 
+;; open current directory in iTerm2 from Emacs
+;; http://dlvr.it/5ySmRy
+(defun iterm-here ()
+  (interactive)
+  (dired-smart-shell-command "open -a iTerm $PWD" nil nil))
+
 (defun move-line-up ()
   "Move up the current line."
   (interactive)

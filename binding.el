@@ -19,6 +19,11 @@
 ;; Non ci sta bisogno di commentare questo codice
 ;; (define-key my-keys-minor-mode-map (kbd "RET") 'newline-and-indent)
 
+
+;; open current directory in iTerm2 from Emacs
+;; http://dlvr.it/5ySmRy
+(define-key my-keys-minor-mode-map (kbd "C-0") 'iterm-here)
+
 ;; move current line up or down
 (define-key my-keys-minor-mode-map [(meta shift up)] 'move-line-up)
 (define-key my-keys-minor-mode-map [(meta shift down)] 'move-line-down)
