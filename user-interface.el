@@ -106,7 +106,6 @@
 (ido-vertical-mode t)
 
 (require 'workgroups2)
-(workgroups-mode 1)
 ;; autoload/autosave:
 ;; if you start Emacs as "emacs --daemon" - turn off autoloading of workgroups:
 (setq wg-use-default-session-file t)
@@ -151,16 +150,23 @@
 ;; activate desktop save mode and load a saved desktop if it exists
 
 
-(require 'desktop)
-;; Automatically save and restore sessions
-(setq desktop-dirname             user-emacs-directory
-      desktop-base-file-name      ".emacs.desktop"
-      desktop-base-lock-name      "lock"
-      desktop-path                (list desktop-dirname)
-      desktop-save                t
-      desktop-files-not-to-save   "^$" ;reload tramp paths
-      desktop-load-locked-desktop nil)
-(desktop-save-mode +1)
+;; uniquify buffer names
+(require 'uniquify) ; bundled with GNU emacs 23.2.1 or before. On in 24.4
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets) ; emacs 24.4 style ⁖ cat.png<dirName>
+
+;; save/restore opened files and windows config
+(desktop-save-mode +1) ; 0 for off
+
+;; (require 'desktop)
+;; ;; Automatically save and restore sessions
+;; (setq desktop-dirname             user-emacs-directory
+;;       desktop-base-file-name      ".emacs.desktop"
+;;       desktop-base-lock-name      "lock"
+;;       desktop-path                (list desktop-dirname)
+;;       desktop-save                t
+;;       desktop-files-not-to-save   "^$" ;reload tramp paths
+;;       desktop-load-locked-desktop nil)
+;; (desktop-save-mode +1)
 (desktop-read)
 
 ;; salviamo la posizione del cursore quando chiudo un buffer
@@ -389,3 +395,5 @@
 (add-to-list 'auto-mode-alist '("Podfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.podspec\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Puppetfile\\'" . ruby-mode))
+
+(workgroups-mode 1)
