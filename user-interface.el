@@ -396,4 +396,10 @@
 (add-to-list 'auto-mode-alist '("\\.podspec\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Puppetfile\\'" . ruby-mode))
 
+;; PYTHON
+(require 'virtualenvwrapper)
+(venv-initialize-interactive-shells) ;; if you want interactive shell support
+(venv-initialize-eshell) ;; if you want eshell support
+(setq venv-location "~/works/virtualenv")
+
 (workgroups-mode 1)

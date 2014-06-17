@@ -62,7 +62,7 @@
     python
     python-mode
     python-django
-    virtualenv
+    virtualenvwrapper
 
     ;; package usefull
     multi-term
