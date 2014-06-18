@@ -63,6 +63,7 @@
     python-mode
     python-django
     virtualenvwrapper
+    jedi
 
     ;; package usefull
     multi-term

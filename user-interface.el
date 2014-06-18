@@ -401,5 +401,15 @@
 (venv-initialize-interactive-shells) ;; if you want interactive shell support
 (venv-initialize-eshell) ;; if you want eshell support
 (setq venv-location "~/works/virtualenv")
+(venv-workon "tutorial") ;; virtualenv di base con jedi e epc installati
+;; pip install --upgrade argparse jedi epc
+
+;; Standard Jedi.el setting
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+;; Type:
+;;     M-x package-install RET jedi RET
+;;     M-x jedi:install-server RET
+;; Then open Python file.
 
 (workgroups-mode 1)
