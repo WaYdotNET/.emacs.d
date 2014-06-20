@@ -28,7 +28,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;;
-(load-theme 'zenburn)
+;; (load-theme 'zenburn)
+;;(load-theme 'adwaita)
+(load-theme 'sanityinc-solarized-dark)
 
 ;; show column number in mode-line
 (setq column-number-mode t)
@@ -46,7 +48,7 @@
 (global-hl-line-mode +1)
 
 ;; smart-mode-line
-(setq sml/theme 'dark)
+(setq sml/theme 'respectful)
 (sml/setup)
 
 (set-frame-font "Source Code Pro for Powerline-12")
@@ -405,7 +407,14 @@
 ;; pip install --upgrade argparse jedi epc
 
 ;; Standard Jedi.el setting
-(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (jedi:setup)
+            (jedi:ac-setup)
+            (local-set-key "\C-cd" 'jedi:show-doc)
+            (local-set-key (kbd "M-SPC") 'jedi:complete)
+            (local-set-key (kbd "M-.") 'jedi:goto-definition)))
+
 (setq jedi:complete-on-dot t)
 ;; Type:
 ;;     M-x package-install RET jedi RET
