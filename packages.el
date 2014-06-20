@@ -16,6 +16,7 @@
     project-explorer
     visual-regexp
     zenburn-theme
+    color-theme-sanityinc-solarized
     workgroups2
 
     ;; editor
