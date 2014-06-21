@@ -29,8 +29,7 @@
 
 ;;
 ;; (load-theme 'zenburn)
-;;(load-theme 'adwaita)
-(load-theme 'sanityinc-solarized-dark)
+(load-theme 'solarized-light)
 
 ;; show column number in mode-line
 (setq column-number-mode t)
@@ -48,7 +47,7 @@
 (global-hl-line-mode +1)
 
 ;; smart-mode-line
-(setq sml/theme 'respectful)
+(setq sml/theme 'light)
 (sml/setup)
 
 (set-frame-font "Source Code Pro for Powerline-12")
