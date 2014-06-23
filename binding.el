@@ -130,7 +130,9 @@
 ;; replace buffer-menu with ibuffer
 (define-key my-keys-minor-mode-map (kbd "C-x C-b") 'ibuffer)
 
+;; magiìt
 (define-key my-keys-minor-mode-map (kbd "C-x g") 'magit-status)
+(define-key my-keys-minor-mode-map (kbd "C-x p") 'magit-push)
 
 ;; expand region!
 (define-key my-keys-minor-mode-map (kbd "C-o") 'er/expand-region)
