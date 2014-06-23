@@ -31,6 +31,9 @@
  ;; fullscreen
 (define-key my-keys-minor-mode-map (kbd "M-RET") 'toggle-fullscreen)
 
+ ;; find-temp-file
+(define-key my-keys-minor-mode-map (kbd "C-x C-t") 'find-temp-file)
+
 ;; project-explorer
 (define-key my-keys-minor-mode-map (kbd "M-1") 'project-explorer-open)
 

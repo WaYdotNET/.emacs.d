@@ -66,6 +66,8 @@
 (require 'projectile)
 (projectile-global-mode)
 
+(require 'find-temp-file)
+
 ;; Show the current function name in the header line
 (which-function-mode)
 (setq which-func-unknown "n/a")

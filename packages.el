@@ -35,6 +35,7 @@
     rainbow-blocks
     rainbow-delimiters
     markdown-mode
+    find-temp-file
 
     ;; editor : web
     web-mode
