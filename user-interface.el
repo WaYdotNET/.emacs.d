@@ -227,6 +227,19 @@
 ;; EDITOR
 (global-auto-revert-mode 1)
 
+;; Highlight Comment Annotations
+;;http://emacsredux.com/blog/2013/07/24/highlight-comment-annotations/
+(defun font-lock-comment-annotations ()
+  "Highlight a bunch of well known comment annotations.
+
+This functions should be added to the hooks of major modes for programming."
+  (font-lock-add-keywords
+   nil '(("\\<\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):"
+          1 font-lock-warning-face t))))
+
+(add-hook 'prog-mode-hook 'font-lock-comment-annotations)
+
+
 ;; auto indentamento
 (electric-indent-mode t)
 
@@ -367,10 +380,10 @@
 '("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode))
 
 (set-face-attribute 'web-mode-html-attr-engine-face nil  :foreground "light sea green")
-(setq web-mode-enable-current-element-highlight t)
+;; (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-auto-pairing t)
 (setq web-mode-enable-css-colorization t)
-(setq web-mode-enable-block-face t)
+;; (setq web-mode-enable-block-face t)
 (setq web-mode-enable-part-face t)
 (setq web-mode-enable-comment-keywords t)
 
