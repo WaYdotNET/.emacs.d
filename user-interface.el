@@ -435,4 +435,9 @@ This functions should be added to the hooks of major modes for programming."
 ;;     M-x jedi:install-server RET
 ;; Then open Python file.
 
+(setq-default fill-column 79 ; Maximum line width.
+              indent-tabs-mode nil ; Use spaces instead of tabs.
+              split-width-threshold 100 ; Split verticly by default.
+              auto-fill-function 'do-auto-fill) ; Auto-fill-mode everywhere.
+
 (workgroups-mode 1)
