@@ -360,9 +360,50 @@ This functions should be added to the hooks of major modes for programming."
 ;;   '(add-to-list 'ac-modes 'inf-ruby-mode))
 ;; (add-hook 'inf-ruby-mode-hook 'ac-inf-ruby-enable)
 
+
+;; JS-mode !!!!
+
 (require 'js-doc)
 ;; javascript => http://melpa.milkbox.net/#/js2-refactor
 (require 'js2-refactor)
+(custom-set-variables
+ '(js2-basic-offset 2)
+ '(js2-bounce-indent-p t)
+ )
+(setq js-basic-indent 2)
+(setq-default js2-basic-indent 2)
+
+(setq-default js2-basic-offset 2)
+(setq-default js2-auto-indent-p t)
+(setq-default js2-cleanup-whitespace t)
+(setq-default js2-enter-indents-newline t)
+(setq-default js2-global-externs "jQuery $")
+(setq-default js2-indent-on-enter-key t)
+(setq-default js2-mode-indent-ignore-first-tab t)
+
+(setq-default js2-global-externs '("module" "require" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
+
+;; We'll let fly do the error parsing...
+(setq-default js2-show-parse-errors nil)
+
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(font-lock-add-keywords
+ 'js2-mode `(("\\(function *\\)("
+             (0 (progn (compose-region (match-beginning 1) (match-end 1) "ƒ")
+                       nil)))))
+
+(font-lock-add-keywords 'js2-mode
+                        '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
+                           1 font-lock-warning-face t)))
+
+(add-hook 'js2-mode-hook 'color-identifiers-mode)
+(autoload 'flymake-jshint "flymake-jshint"
+  "Error and linting support mode for JavaScript." t nil)
+
+(add-hook 'js-mode-hook
+          (lambda () (flymake-mode 1)))
+
 
 ;; set global color enable
 ;; (require 'color-identifiers-mode)
@@ -419,24 +460,11 @@ This functions should be added to the hooks of major modes for programming."
 (venv-workon "tutorial") ;; virtualenv di base con jedi e epc installati
 ;; pip install --upgrade argparse jedi epc
 
-;; Standard Jedi.el setting
-(add-hook 'python-mode-hook
-          (lambda ()
-            (jedi:setup)
-            (jedi:ac-setup)
-            (local-set-key "\C-cd" 'jedi:show-doc)
-            (local-set-key (kbd "M-SPC") 'jedi:complete)
-            (local-set-key (kbd "M-.") 'jedi:goto-definition)))
-
-(setq jedi:complete-on-dot t)
-;; Type:
-;;     M-x package-install RET jedi RET
-;;     M-x jedi:install-server RET
-;; Then open Python file.
-
-(setq-default fill-column 200 ; Maximum line width.
-              indent-tabs-mode nil ; Use spaces instead of tabs.
-              split-width-threshold 100 ; Split verticly by default.
-              auto-fill-function 'do-auto-fill) ; Auto-fill-mode everywhere.
+(elpy-enable)
+;; Fixing a key binding bug in elpy
+(define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
+;; Fixing another key binding bug in iedit mode
+(define-key global-map (kbd "C-c o") 'iedit-mode)
+(setq elpy-rpc-backend "jedi")
 
 (workgroups-mode 1)

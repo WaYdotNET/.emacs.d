@@ -39,6 +39,7 @@
 
     ;; editor : web
     web-mode
+    js-comint
     js2-mode
     js-doc
     js2-refactor
@@ -49,6 +50,7 @@
     skewer-mode
     csharp-mode
     json-mode
+    color-identifiers-mode
 
     ;; ruby
     enh-ruby-mode
@@ -61,6 +63,7 @@
     haml-mode
 
     ;; python
+    elpy
     python
     python-mode
     python-django
