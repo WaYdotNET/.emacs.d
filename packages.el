@@ -51,6 +51,8 @@
     csharp-mode
     json-mode
     color-identifiers-mode
+    typescript
+    tss
 
     ;; ruby
     enh-ruby-mode

@@ -49,7 +49,7 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-(set-frame-font "Source Code Pro for Powerline-12")
+(set-frame-font "Source Code Pro-8")
 
 ;; disabilito la acapo automatico
 (global-visual-line-mode t)
@@ -360,6 +360,25 @@ This functions should be added to the hooks of major modes for programming."
 ;;   '(add-to-list 'ac-modes 'inf-ruby-mode))
 ;; (add-hook 'inf-ruby-mode-hook 'ac-inf-ruby-enable)
 
+;; If use bundled typescript.el,
+
+;; first install : nodejs npm nodejs-legacy
+;; npm packages: typescript typescript-tools
+
+(require 'typescript)
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+
+(require 'tss)
+
+;; Key binding
+(setq tss-popup-help-key "C-:")
+(setq tss-jump-to-definition-key "C->")
+
+;; Make config suit for you. About the config item, eval the following sexp.
+;; (customize-group "tss")
+
+;; Do setting recommemded configuration
+(tss-config-default)
 
 ;; JS-mode !!!!
 
