@@ -49,7 +49,7 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-(set-frame-font "Source Code Pro-8")
+(set-frame-font "Source Code Pro-11")
 
 ;; disabilito la acapo automatico
 (global-visual-line-mode t)
