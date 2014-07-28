@@ -120,6 +120,11 @@
 
 
 
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
 ;; Align command !!!
 
 ;; from http://stackoverflow.com/questions/3633120/emacs-hotkey-to-align-equal-signs

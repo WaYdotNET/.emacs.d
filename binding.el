@@ -116,6 +116,9 @@
                                         (kill-line 0)
                                         (indent-according-to-mode)))
 
+;; kill-other-buffers
+(define-key my-keys-minor-mode-map (kbd "C-c C-c C-k") 'kill-other-buffers)
+
 ;; Activate occur easily inside isearch
 (define-key isearch-mode-map (kbd "C-c o")
   (lambda () (interactive)
