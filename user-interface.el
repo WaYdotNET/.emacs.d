@@ -381,6 +381,9 @@ This functions should be added to the hooks of major modes for programming."
 (tss-config-default)
 
 ;; JS-mode !!!!
+(require 'flycheck)
+(add-hook 'js-mode-hook
+          (lambda () (flycheck-mode t)))
 
 (require 'js-doc)
 ;; javascript => http://melpa.milkbox.net/#/js2-refactor
