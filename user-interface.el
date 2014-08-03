@@ -14,10 +14,10 @@
                  "%b"))))
 
 
-;; rimoviamo i backup automatici fatti da emacs
-(setq make-backup-file nil)
-;; abilitiamo l auto salvataggio
-(setq auto-save-default t)
+;; disable auto-save and auto-backup
+(setq auto-save-default nil)
+(setq make-backup-files nil)
+;; (setq auto-save-default t)
 ;; bypassiamo la schermata di benvenuto
 (setq inhibit-startup-message t)
 ;; impostiamo il tab di default a 2 caratteri
@@ -26,6 +26,12 @@
 (setq-default indent-tabs-mode nil)
 ;; basta y/n e non yes/no ... su dai
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; store all backup and autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 ;;
 (load-theme 'zenburn)
@@ -49,7 +55,7 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-(set-frame-font "Source Code Pro-11")
+(set-frame-font "Source Code Pro-9")
 
 ;; disabilito la acapo automatico
 (global-visual-line-mode t)
