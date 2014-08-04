@@ -55,7 +55,7 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-(set-frame-font "Source Code Pro-9")
+(set-frame-font "Source Code Pro-10")
 
 ;; disabilito la acapo automatico
 (global-visual-line-mode t)
@@ -390,6 +390,8 @@ This functions should be added to the hooks of major modes for programming."
 (require 'flycheck)
 (add-hook 'js-mode-hook
           (lambda () (flycheck-mode t)))
+(add-hook 'js2-mode-hook
+          (lambda () (flycheck-mode t)))
 
 (require 'js-doc)
 ;; javascript => http://melpa.milkbox.net/#/js2-refactor
@@ -426,12 +428,6 @@ This functions should be added to the hooks of major modes for programming."
                            1 font-lock-warning-face t)))
 
 (add-hook 'js2-mode-hook 'color-identifiers-mode)
-(autoload 'flymake-jshint "flymake-jshint"
-  "Error and linting support mode for JavaScript." t nil)
-
-(add-hook 'js-mode-hook
-          (lambda () (flymake-mode 1)))
-
 
 ;; set global color enable
 ;; (require 'color-identifiers-mode)
