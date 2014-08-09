@@ -48,14 +48,28 @@
 (set-face-attribute 'mode-line nil :box nil)
 (set-face-attribute 'mode-line-inactive nil :box nil)
 
-;; Highlight Current Line
-(global-hl-line-mode +1)
-
 ;; smart-mode-line
 (setq sml/theme 'dark)
 (sml/setup)
 
 (set-frame-font "Source Code Pro-10")
+
+;; Highlight Current Line
+;; (global-hl-line-mode +1)
+(require 'highlight-indentation)
+
+(setq frame-char (frame-char-width (selected-frame)))
+
+(set-face-attribute 'highlight-indentation-face nil
+                    :stipple (list frame-char (/ frame-char 2) (string (* frame-char 2) 0 0 0))
+                     :inherit nil
+                     :foreground "grey"
+                     )
+
+(set-face-attribute 'highlight-indentation-current-column-face nil
+                    :stipple (list frame-char (/ frame-char 2) (string (* frame-char 2) 0 0 0))
+                    :inherit nil
+                    :foreground "yellow")
 
 ;; disabilito la acapo automatico
 (global-visual-line-mode t)
@@ -137,21 +151,6 @@
 ;; yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
-
-;; auto-completamento
-(require 'auto-complete-config)
-(ac-config-default)
-(require 'auto-complete-nxml)
-(add-to-list 'ac-modes 'web-mode)
-(add-to-list 'ac-modes 'enh-ruby-mode)
-;; If you want to start completion manually from the beginning
-(setq auto-complete-nxml-automatic-p 1)
-
-;; Keystroke for popup help about something at point.
-(setq auto-complete-nxml-popup-help-key "C-:")
-
-;; Keystroke for toggle on/off automatic completion.
-(setq auto-complete-nxml-toggle-automatic-key "C-c C-t")
 
 ;; salvo in automatico quello che avevo aperto, cosi' al prossimo riavvio
 ;; ho di nuovo tutto quello che mi serve
@@ -248,7 +247,7 @@ This functions should be added to the hooks of major modes for programming."
 
 
 ;; auto indentamento
-(electric-indent-mode t)
+;; (electric-indent-mode t)
 
 ;; linea di identazione
 (require 'indent-guide)
@@ -286,8 +285,6 @@ This functions should be added to the hooks of major modes for programming."
 
 (add-hook 'web-mode-hook
           (lambda () (flyspell-prog-mode)))
-;; flyspell mode breaks auto-complete mode without this.
-(ac-flyspell-workaround)
 
 ;; EDITOR : WEB
 (flycheck-color-mode-line-mode 1)
@@ -477,12 +474,6 @@ This functions should be added to the hooks of major modes for programming."
 (add-to-list 'auto-mode-alist '("Puppetfile\\'" . ruby-mode))
 
 ;; PYTHON
-(require 'virtualenvwrapper)
-(venv-initialize-interactive-shells) ;; if you want interactive shell support
-(venv-initialize-eshell) ;; if you want eshell support
-(setq venv-location "~/works/virtualenv")
-(venv-workon "tutorial") ;; virtualenv di base con jedi e epc installati
-;; pip install --upgrade argparse jedi epc
 
 (elpy-enable)
 ;; Fixing a key binding bug in elpy

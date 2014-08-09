@@ -66,11 +66,6 @@
 
     ;; python
     elpy
-    python
-    python-mode
-    python-django
-    virtualenvwrapper
-    jedi
 
     ;; package usefull
     multi-term
@@ -85,11 +80,7 @@
     diff-hl
 
     ;; auto complete system
-    auto-complete
-    ac-js2
-    auto-complete-nxml
-    popup
-    ac-emmet
+;;    mode-Company
 
     ;; org-mode
     org
