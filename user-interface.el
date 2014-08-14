@@ -52,24 +52,24 @@
 (setq sml/theme 'dark)
 (sml/setup)
 
-(set-frame-font "Source Code Pro-10")
+(set-frame-font "Source Code Pro-11")
 
 ;; Highlight Current Line
-;; (global-hl-line-mode +1)
+(global-hl-line-mode +1)
 (require 'highlight-indentation)
 
 (setq frame-char (frame-char-width (selected-frame)))
 
-(set-face-attribute 'highlight-indentation-face nil
-                    :stipple (list frame-char (/ frame-char 2) (string (* frame-char 2) 0 0 0))
-                     :inherit nil
-                     :foreground "grey"
-                     )
+;; (set-face-attribute 'highlight-indentation-face nil
+;;                     :stipple (list frame-char (/ frame-char 2) (string (* frame-char 2) 0 0 0))
+;;                      :inherit nil
+;;                      :foreground "grey"
+;;                      )
 
-(set-face-attribute 'highlight-indentation-current-column-face nil
-                    :stipple (list frame-char (/ frame-char 2) (string (* frame-char 2) 0 0 0))
-                    :inherit nil
-                    :foreground "yellow")
+;; (set-face-attribute 'highlight-indentation-current-column-face nil
+;;                     :stipple (list frame-char (/ frame-char 2) (string (* frame-char 2) 0 0 0))
+;;                     :inherit nil
+;;                     :foreground "yellow")
 
 ;; disabilito la acapo automatico
 (global-visual-line-mode t)
@@ -189,8 +189,7 @@
 ;; cursore lampeggiante
 (blink-cursor-mode t)
 ;; evidenziamo le parentesi
-;;(show-paren-mode t)
-
+(show-paren-mode t)
 
 ;; http://20seven.org/journal/2008/11/02/distraction-free-programming-with-gnu-emacs/
 ;; full screen toggle using command+[RET]

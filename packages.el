@@ -39,7 +39,6 @@
 
     ;; editor : web
     web-mode
-    js-comint
     js2-mode
     js-doc
     js2-refactor
