@@ -15,8 +15,8 @@
 
 
 ;; disable auto-save and auto-backup
-(setq auto-save-default nil)
-(setq make-backup-files nil)
+;;(setq auto-save-default nil)
+;;(setq make-backup-files nil)
 ;; (setq auto-save-default t)
 ;; bypassiamo la schermata di benvenuto
 (setq inhibit-startup-message t)
@@ -25,6 +25,7 @@
 ;; usiamo gli spazi al posto dei tab !!!
 (setq-default indent-tabs-mode nil)
 ;; basta y/n e non yes/no ... su dai
+;;
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; store all backup and autosave files in the tmp dir

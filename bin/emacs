@@ -1,4 +1,0 @@
-#/bin/sh
-
-## Run Emacs 24 from macports
-exec /Applications/MacPorts/EmacsMac.app/Contents/MacOS/Emacs $*
