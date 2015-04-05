@@ -17,3 +17,5 @@ places
 projectile-bookmarks.eld
 session*
 .emacs.desktop
+.emacs.desktop.lock
+.ido.last

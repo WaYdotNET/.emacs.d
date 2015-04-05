@@ -75,7 +75,8 @@
 
 
 (use-package magit
-  :bind ("C-x g" . magit-status))
+  :bind ("C-x g" . magit-status)
+  :ensure t)
 
 ;; (use-package git-gutter+
 ;;   :config
