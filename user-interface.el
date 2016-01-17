@@ -1,5 +1,9 @@
 ;; personal user interface customization
 
+;; macosx keybind fix
+(setq mac-option-modifier 'none)
+(setq mac-command-modifier 'meta)
+
 ;; minimalista
 
 ;; Remove scrollbars, menu bars, and toolbars
