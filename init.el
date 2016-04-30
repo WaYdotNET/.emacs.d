@@ -140,7 +140,7 @@ This functions should be added to the hooks of major modes for programming."
 ;;    (flx-ido-mode 1)
 ;;    ;; disable ido faces to see flx highlights.
 ;;    (setq ido-use-faces nil)
-;;    ;; preferisco il vertical !
+;    ;; preferisco il vertical !
 ;;    (ido-vertical-mode t))
 ;;   :ensure t)
 (use-package ido
@@ -326,6 +326,23 @@ This functions should be added to the hooks of major modes for programming."
 
   (use-package pony-mode :ensure t)
 
+(use-package neotree
+  :ensure t
+  :bind ("s-\\" . neotree-toggle))
 
 (load (concat user-emacs-directory "function.el"))
 (load (concat user-emacs-directory "binding.el"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (neotree pony-mode anaconda-mode jedi-direx company-jedi company yasnippet projectile web-mode rainbow-mode flycheck-color-mode-line js2-mode color-identifiers-mode flycheck undo-tree indent-guide flx-ido ido-vertical-mode ido-ubiquitous diff-hl full-ack visual-regexp magit highlight-indentation nyan-mode find-temp-file smex zenburn-theme use-package))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
